@@ -17,10 +17,6 @@ jobs:
       - name: Output Inputs
         run: echo "${{ toJSON(github.event.inputs) }}"
 
-      - name: Get Branch
-        id: branch
-        run: echo "git_branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_BRANCH
-
       - name: Check Branch
         run: echo "${{ env.branch }}"
 
