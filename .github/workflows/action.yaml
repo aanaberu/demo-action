@@ -16,5 +16,5 @@ jobs:
     steps:
       - name: Output Inputs
         run: | echo "${{ toJSON(github.event.inputs) }}"
-          echo " ${{ GITHUB_REF#refs/heads/}.${GITHUB_SHA} }"
+          echo " hello world " 
 
