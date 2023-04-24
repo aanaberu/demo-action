@@ -10,9 +10,8 @@ on:
         type: string
         required: true
 
-jobs:    
-  dev:
-    runs-on: ubuntu-latest
+jobs:
+  myJob:
     steps:
-      - name: Print value
-        run: echo ${{ env.environment }}
+      - name: Output Inputs
+        run: echo "${{ toJSON(github.event.inputs) }}"
