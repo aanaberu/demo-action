@@ -13,3 +13,10 @@ on:
       branch:
         type: string
         required: true
+
+jobs:    
+  dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print value
+        run: echo ${{ env.environment }}
