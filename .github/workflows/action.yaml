@@ -9,6 +9,13 @@ on:
       branch:
         type: string
         required: true
+          inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
 
 jobs:
   myJob:
@@ -19,10 +26,6 @@ jobs:
 
       - name: Check Branch
         run: echo "${{ env.branch }}"
-
-      - name: Get Hash
-        id: hash
-        run: echo "git_hash=$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_HASH
 
       - name: Check Hash
         run: echo "${{ env.hash }}"
