@@ -1,0 +1,14 @@
+name: Java CY with Gradel
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: string
+        required: true
+      branch:
+        type: string
+        required: true
+
+    push:
+        branches: [ main ]
