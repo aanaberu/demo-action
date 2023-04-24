@@ -26,6 +26,6 @@ jobs:
         echo "::set-output name=run_id::$run_id"
         git_hash=$(git rev-parse --short "$GITHUB_SHA")
         echo ${{github.run_id}}
-        echo $git_hash
-        curl --request POST -u 'admin:admin' --header 'content-type: application/json' --url 'https://9f96-2600-1700-1850-ca20-80cf-32ea-3166-e7a7.ngrok-free.app/api/v1/templates/Applications/Folder94c2f7cfc5d44e13ae12295e39b23b43/Release0bda09f2c6e2469fbe1abd8cb0eed9c5/start' -d '{"releaseTitle":"Release-action-${{github.run_id}}", "releaseVariables": {"hash": "${{git_hash}}"}}'
+        echo ${{ GITHUB_SHA }}
+        curl --request POST -u 'admin:admin' --header 'content-type: application/json' --url 'https://9f96-2600-1700-1850-ca20-80cf-32ea-3166-e7a7.ngrok-free.app/api/v1/templates/Applications/Folder94c2f7cfc5d44e13ae12295e39b23b43/Release0bda09f2c6e2469fbe1abd8cb0eed9c5/start' -d '{"releaseTitle":"Release-action-${{github.run_id}}", "releaseVariables": {"hash": "$git_hash"}}'
 
