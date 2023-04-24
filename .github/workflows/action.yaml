@@ -12,6 +12,7 @@ on:
 
 jobs:
   myJob:
+    runs-on: ubuntu-latest
     steps:
       - name: Output Inputs
         run: echo "${{ toJSON(github.event.inputs) }}"
