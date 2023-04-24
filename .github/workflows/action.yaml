@@ -1,10 +1,6 @@
 name: Java CY with Gradel
 
 on:
-  push:
-    branches:
-    - main
-    - dev
   workflow_dispatch:
     inputs:
       environment:
@@ -19,4 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print value
-        run: echo ${{ env.environment }}
+        run: echo ${{ environment.type }}
