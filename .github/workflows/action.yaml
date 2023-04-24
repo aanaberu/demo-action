@@ -9,7 +9,6 @@ on:
       branch:
         type: string
         required: true
-          inputs:
       logLevel:
         description: 'Log level'     
         required: true
