@@ -1,6 +1,10 @@
 name: Java CY with Gradel
 
 on:
+  push:
+    branches:
+    - main
+    - dev
   workflow_dispatch:
     inputs:
       environment:
@@ -9,6 +13,3 @@ on:
       branch:
         type: string
         required: true
-
-    push:
-        branches: [ main ]
