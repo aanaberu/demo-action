@@ -16,5 +16,8 @@ jobs:
     steps:
       - name: Output Inputs
         run: | echo "${{ toJSON(github.event.inputs) }}"
-          echo " hello world " 
+        run: |
+          echo "${{ toJSON(github.event.inputs) }}"
+          echo "Branch: ${{ steps.vars.outputs.branch }}"
+          echo "Sha: ${{ steps.vars.outputs.sha_short }}"
 
