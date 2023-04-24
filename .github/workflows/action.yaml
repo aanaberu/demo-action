@@ -15,4 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print value
-        run: echo ${{ environment.type }}
+        run: echo ${{ env.environment }}
